@@ -1,0 +1,49 @@
+<html>
+
+<body>
+    <div style="height: 200px;background: #EEE" id="test_id"></div>
+    <div class="test_class"></div>
+</body>
+<!-- <script src="test.js"></script> -->
+<script src="node_modules\jquery\jquery.js"></script>
+<script>
+//性能测试
+
+var time1 = (new Date()).getTime();
+
+for (var i = 0; i < 100000; i++) {
+	// $('.test_class');
+	// document.getElementsByClassName('test_class');
+
+	// document.getElementById('test_id');
+	//tips
+	// $('#test_id').find('p.classA');　　
+	// $('#test_id').find('p.classB');　
+
+
+	// var cached = $('#test_id');　　
+	// cached.find('p.classA');　　
+	// cached.find('p.classB');　　
+
+
+	// var $text = $("#test_id");　　
+	// var $ts = $text.text();
+	// var $text = $("#test_id");　　
+	// var $ts = $.text($text);
+
+	// var elem = $('#test_id');
+	// for (var i = 0; i < 10000; i++) {
+	// 	elem.append('<li>element ' + i + '</li>');
+	// }
+	// var elem = $('#test_id'),
+	// 	arr = [];
+	// for (var i = 0; i < 10000; i++) {
+	// 	arr.push('<li>element ' + i + '</li>');
+	// }
+	// elem.append(arr.join(''));
+}
+var time2 = (new Date()).getTime();
+
+console.log(time2 - time1);
+</script>
+</html>
